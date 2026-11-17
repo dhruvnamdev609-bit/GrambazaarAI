@@ -81,8 +81,152 @@
       0%, 100% { transform: scale(1); }
       50% { transform: scale(1.06); }
     }
+
     .pulse-wa {
       animation: pulse-subtle 2.5s infinite ease-in-out;
+    }
+
+    /* Accessible GramBazaar dark theme */
+    :root { color-scheme: light; }
+    body { transition: background-color .25s ease, color .25s ease; }
+    .theme-toggle-btn { flex-shrink: 0; }
+    .theme-toggle-btn:focus-visible { outline: 3px solid #e6a23c; outline-offset: 3px; }
+
+    html.dark-theme, html.dark-theme body {
+      color-scheme: dark;
+      background: #08130f !important;
+      color: #f1f5f2 !important;
+    }
+    html.dark-theme body, html.dark-theme main, html.dark-theme #productListings {
+      background-color: #08130f !important;
+      color: #f1f5f2 !important;
+    }
+    html.dark-theme header {
+      background: rgba(13,29,22,.97) !important;
+      border-color: #365344 !important;
+      color: #f1f5f2 !important;
+    }
+    html.dark-theme section:not(#featured),
+    html.dark-theme .bg-white,
+    html.dark-theme [class~="bg-[#FAF7F2]"] {
+      background-color: #101f19 !important;
+      color: #f1f5f2 !important;
+    }
+    html.dark-theme [class*="bg-earth-"],
+    html.dark-theme [class*="bg-village-50"],
+    html.dark-theme [class*="bg-village-100"],
+    html.dark-theme [class*="bg-emerald-50"],
+    html.dark-theme [class*="bg-emerald-100"] {
+      background-color: #172a21 !important;
+      color: #e8f3ec !important;
+    }
+    html.dark-theme #categories { background: rgba(16,31,25,.97) !important; border-color: #365344 !important; }
+    html.dark-theme #suggestions { background: #0b1812 !important; }
+    html.dark-theme #suggestions > div > div { background: #13251c !important; border-color: #3b5b49 !important; }
+
+    /* High-contrast text */
+    html.dark-theme [class*="text-gray-900"],
+    html.dark-theme [class*="text-gray-800"],
+    html.dark-theme [class*="text-gray-700"],
+    html.dark-theme [class*="text-earth-800"],
+    html.dark-theme [class*="text-village-800"],
+    html.dark-theme [class*="text-village-900"] { color: #f3f7f4 !important; }
+    html.dark-theme [class*="text-gray-600"],
+    html.dark-theme [class*="text-gray-500"],
+    html.dark-theme [class*="text-gray-400"],
+    html.dark-theme [class*="text-earth-700"],
+    html.dark-theme [class*="text-village-700"],
+    html.dark-theme [class*="text-village-600"] { color: #c2d0c7 !important; }
+
+    html.dark-theme input, html.dark-theme textarea, html.dark-theme select {
+      background: #0b1812 !important;
+      color: #f3f7f4 !important;
+      border-color: #496957 !important;
+    }
+    html.dark-theme input::placeholder, html.dark-theme textarea::placeholder { color: #9aada1 !important; opacity: 1; }
+    html.dark-theme option { background: #101f19; color: #f3f7f4; }
+
+    html.dark-theme [class*="border-earth-"],
+    html.dark-theme [class*="border-gray-"],
+    html.dark-theme [class*="border-village-100"],
+    html.dark-theme [class*="border-village-200"] { border-color: #365344 !important; }
+
+    html.dark-theme #productsGrid > div {
+      background: #13251c !important;
+      border-color: #3b5b49 !important;
+      box-shadow: 0 12px 28px rgba(0,0,0,.24);
+    }
+    html.dark-theme #productsGrid > div [class*="border-t"] { border-color: #365344 !important; }
+    html.dark-theme #cartModal > div,
+    html.dark-theme #cartModalBody,
+    html.dark-theme #cartModalFooter { background: #101f19 !important; color: #f1f5f2 !important; border-color: #365344 !important; }
+    html.dark-theme #cartItemsList > div,
+    html.dark-theme #checkoutFormSection > div { background: #172a21 !important; border-color: #365344 !important; }
+    html.dark-theme #noProductsState { background: #13251c !important; border-color: #496957 !important; }
+    html.dark-theme .theme-toggle-btn { background: #20392c !important; color: #f4d58b !important; border-color: #62836f !important; }
+    html.dark-theme .theme-toggle-btn:hover { background: #2a4938 !important; }
+
+    /* Hero section: replace the light Tailwind gradient and recolor every nested panel */
+    html.dark-theme #hero {
+      background: radial-gradient(ellipse at 12% 8%, rgba(34, 112, 72, .28), transparent 42%),
+                  linear-gradient(135deg, #071a12 0%, #0d2419 52%, #102c20 100%) !important;
+      color: #f4faf6 !important;
+      border-color: #365344 !important;
+    }
+    html.dark-theme #hero h1,
+    html.dark-theme #hero h2,
+    html.dark-theme #hero h3,
+    html.dark-theme #hero p,
+    html.dark-theme #hero span,
+    html.dark-theme #hero i { color: inherit; }
+    html.dark-theme #hero h1 { color: #f7fbf8 !important; }
+    html.dark-theme #hero h1 .text-village-700 { color: #75d6a0 !important; }
+    html.dark-theme #hero .text-gray-600,
+    html.dark-theme #hero .text-gray-500 { color: #c5d7cc !important; }
+    html.dark-theme #hero .bg-white,
+    html.dark-theme #hero .rounded-\\[22px\\] {
+      background: #14291f !important;
+      color: #f1f7f3 !important;
+      border-color: #3c604b !important;
+    }
+    html.dark-theme #hero .bg-village-100,
+    html.dark-theme #hero .bg-village-50 {
+      background: #1b3829 !important;
+      color: #e6f7ec !important;
+      border-color: #426b52 !important;
+    }
+    html.dark-theme #hero .border-gray-100,
+    html.dark-theme #hero .border-village-100,
+    html.dark-theme #hero .border-earth-200 {
+      border-color: #3b5b49 !important;
+    }
+    html.dark-theme #hero a.bg-white {
+      background: #203d2d !important;
+      color: #f4faf6 !important;
+      border-color: #6b9b7b !important;
+    }
+    html.dark-theme #hero a.bg-white:hover {
+      background: #2a5039 !important;
+    }
+    html.dark-theme #hero .bg-gradient-to-tr {
+      box-shadow: 0 24px 60px rgba(0, 0, 0, .42);
+    }
+
+    /* Keep important branded areas vivid */
+    html.dark-theme #featured {
+      background: linear-gradient(135deg,#0d3827 0%,#10291f 55%,#172b20 100%) !important;
+      color: #fff !important;
+    }
+    html.dark-theme footer { background: #06100c !important; border-color: #26734a !important; }
+    html.dark-theme .bg-village-800,
+    html.dark-theme .bg-village-900,
+    html.dark-theme .bg-village-600,
+    html.dark-theme .bg-village-700,
+    html.dark-theme .bg-saffron-500 { color: #fff !important; }
+    html.dark-theme ::-webkit-scrollbar-track { background: #0b1812; }
+    html.dark-theme ::-webkit-scrollbar-thumb { background: #397653; }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
     }
   </style>
 </head>
@@ -138,6 +282,12 @@
 <a class="hover:text-village-600 transition" href="#about">हमारे बारे में</a>
 <a class="hover:text-village-600 transition" href="#suggestions">सुझाव</a>
 </nav>
+<!-- Light / Dark Theme Toggle -->
+<button id="themeToggle" type="button" onclick="toggleTheme()" aria-label="डार्क थीम चालू करें" aria-pressed="false" title="थीम बदलें"
+  class="theme-toggle-btn inline-flex items-center justify-center gap-2 w-10 h-10 sm:w-auto sm:px-3 rounded-full border border-earth-300 bg-earth-50 text-village-800 hover:bg-earth-100 transition shadow-sm">
+  <i id="themeToggleIcon" class="w-5 h-5" data-lucide="moon"></i>
+  <span id="themeToggleLabel" class="hidden xl:inline text-xs font-semibold">Dark</span>
+</button>
 <!-- Cart Trigger Button -->
 <button aria-label="कार्ट देखें" class="relative flex items-center gap-2.5 bg-village-600 hover:bg-village-700 text-white px-4 py-2.5 rounded-full font-semibold shadow-md shadow-village-600/30 transition hover:shadow-lg active:scale-95" onclick="openCartModal()">
 <i class="w-5 h-5" data-lucide="shopping-cart"></i>
@@ -156,7 +306,7 @@
 </div>
 </header>
 <!-- Hero Section -->
-<section class="relative overflow-hidden bg-gradient-to-b from-village-50 to-[#FAF7F2] py-12 lg:py-16 border-b border-earth-200">
+<section id="hero" class="relative overflow-hidden bg-gradient-to-b from-village-50 to-[#FAF7F2] py-12 lg:py-16 border-b border-earth-200">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
 <!-- Left Text Content -->
@@ -841,12 +991,54 @@
     // Initialization & LocalStorage handling
     // ----------------------------------------------------
     document.addEventListener("DOMContentLoaded", () => {
+      initTheme();
       loadCartFromStorage();
       renderCategoryPills();
       renderProducts();
       updateCartUI();
       lucide.createIcons();
     });
+
+    // Light / Dark theme: persists the user's choice in localStorage.
+    const THEME_STORAGE_KEY = "grambazaar_theme_v1";
+
+    function applyTheme(theme) {
+      const isDark = theme === "dark";
+      document.documentElement.classList.toggle("dark-theme", isDark);
+      document.documentElement.dataset.theme = isDark ? "dark" : "light";
+
+      const toggle = document.getElementById("themeToggle");
+      const icon = document.getElementById("themeToggleIcon");
+      const label = document.getElementById("themeToggleLabel");
+
+      if (toggle) {
+        toggle.setAttribute("aria-pressed", String(isDark));
+        toggle.setAttribute("aria-label", isDark ? "लाइट थीम चालू करें" : "डार्क थीम चालू करें");
+        toggle.title = isDark ? "Switch to light theme" : "Switch to dark theme";
+      }
+      if (icon) icon.setAttribute("data-lucide", isDark ? "sun" : "moon");
+      if (label) label.textContent = isDark ? "Light" : "Dark";
+      if (window.lucide) lucide.createIcons();
+    }
+
+    function initTheme() {
+      let theme = "light";
+      try {
+        const saved = localStorage.getItem(THEME_STORAGE_KEY);
+        if (saved === "dark" || saved === "light") theme = saved;
+        else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) theme = "dark";
+      } catch (error) {
+        console.warn("Theme preference could not be read:", error);
+      }
+      applyTheme(theme);
+    }
+
+    function toggleTheme() {
+      const next = document.documentElement.classList.contains("dark-theme") ? "light" : "dark";
+      applyTheme(next);
+      try { localStorage.setItem(THEME_STORAGE_KEY, next); }
+      catch (error) { console.warn("Theme preference could not be saved:", error); }
+    }
 
     function loadCartFromStorage() {
       try {
